@@ -45,6 +45,15 @@ body {
     color: white;
 }
 /*Section fonction*/
+.fonction {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.fonction-title {
+    margin-left: 50px;
+}
 .container-fonction {
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +72,7 @@ body {
     color: black;
     text-decoration: none;  
 }
-.card-title {
+.card-title-fonction {
     display: flex;
     text-decoration: none;
     justify-content: space-around;
@@ -72,7 +81,7 @@ body {
     background-color: #BCD0E5;
     color: white;
 }
-/*restaurant*/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+/*restaurant*/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 .card {
     background-color: white;
     border-radius: 20px;
@@ -88,10 +97,6 @@ div.card-content {
     padding-left: 15px;
     display: flex;
     flex-direction: column;
-}
-.restaurant-title {
-    display: flex;
-
 }
 .img-restaurant {
     display: flex;
@@ -109,20 +114,24 @@ div.card-content {
 }
 .restaurant {
     background-color: #F2F2F2;
+    padding-top: 15px;
+}
+.restaurant-title {
+    margin-left: 80px;
 }
 .container-restaurant {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;  
     padding-bottom: 30px;
-
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .card-restaurant {
     margin: 15px;
     width: calc(50% - 50px);
     padding: 0;
 }
-
 /*Footer*/
 footer {
     display: flex;
@@ -143,6 +152,7 @@ footer {
     margin-left: 15px;
     margin-right: 5px;
 }
+
 
 
 

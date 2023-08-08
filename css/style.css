@@ -5,7 +5,6 @@ body {
 }
 .main-container {
     width: 100%;
-    box-sizing: border-box;
 }
 /*header*/
 .header {
@@ -24,7 +23,7 @@ body {
 .localisation {
     display: flex;
     justify-content: space-around;
-    background-color: #c9c6c6;
+    background-color: #d8d6d6;
 }
 /*recherche*/
 .recherche {
@@ -43,13 +42,15 @@ body {
     border-radius: 50px 50px 50px 50px;
     font-weight: bold;
     color: white;
+    border-color:white;
 }
 /*Section fonction*/
 .fonction {
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
-    margin-right: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 50px;
 }
 .fonction-title {
     margin-left: 50px;
@@ -87,9 +88,10 @@ body {
 .card-title-fonction {
     display: flex;
     text-decoration: none;
-    justify-content: space-around;
+    justify-content: space-around;    
 }
-.card-fonction:hover {
+
+.card-fonction:hover, .card-title-fonction:hover {
     background-color: #BCD0E5;
     color: white;
 }
@@ -109,6 +111,7 @@ div.card-content {
     padding-left: 15px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 .img-restaurant {
     display: flex;
@@ -116,7 +119,10 @@ div.card-content {
     height: 250px;
     border-radius: 20px 20px 0px 0px;    
 }
-
+.card-title {
+    margin: 0;
+    margin-top: 10px;
+}
 /*permet de mettre photo et texte en colonne - change la couleur du a en noir et enleve le soulignement*/
 .a-restaurant {
     display: flex;
@@ -126,7 +132,7 @@ div.card-content {
 }
 .restaurant {
     background-color: #F2F2F2;
-    padding-top: 15px;
+    padding-top: 20px;   
 }
 .restaurant-title {
     margin-left: 80px;
@@ -138,6 +144,7 @@ div.card-content {
     padding-bottom: 30px;
     margin-left: 50px;
     margin-right: 50px;
+    gap: 20px 20px;
 }
 .card-restaurant {
     margin: 15px;
@@ -148,34 +155,104 @@ div.card-content {
     color: black;
     text-decoration: none;
 }
-.a-restaurant:hover {
-    background-color: #BCD0E5;
-    color: white;
-    border-radius: 20px 20px 20px 20px;  
-}
 /*Footer*/
 footer {
     display: flex;
-    background-color: #525151;
-    justify-content: flex-end;
+    background-color: #353535;
+    justify-content: space-around;
 }
-.a-renseignement {
-    text-decoration: none;
-    color: white;
-}
-
 .container-footer {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;    
+    align-items: center;
+    flex-direction: row-reverse;
 }
-.card-renseignement {
-    margin-left: 15px;
-    margin-right: 5px;
+.a-renseignement {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    justify-content: space-around;
+}
+.a-renseignement-footer {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: space-around;
+}
+ul.footer {
+    display: flex;
+    flex-direction: row;
+}
+.li-footer-first {
+    margin-right: 20px;
+    margin-left: 50px;
+}
+.li-footer, .li-footer-first {
+    list-style: none;
 }
 .a-renseignement:hover {
     color: red;
 }
+.footer {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1024px) {
+    .img-ohmyfood {   
+        width: 50%;
+    }
+    .container-fonction {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+    .card-fonction {
+        width: 95%;
+    }
+    .fonction-title {
+        margin: 0;
+    }
+    .container-restaurant {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 30px;
+
+    }
+    footer {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .card-restaurant {
+        width: 95%;
+    }
+    .container-footer {
+        padding-top: 15px;
+    }
+    ul.footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .a-renseignement {
+        display: flex;
+        justify-content: flex-start;
+        margin-right: 5px;
+    }
+    h4.renseignement-title {
+        margin: 0;
+    }
+.li-footer-first {
+    margin: 0;
+    padding-bottom: 15px;
+}
+.a-renseignement-footer {
+    margin-bottom: 20px;
+}
+
+   
+}
+    
 
 
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="style.menu.css">
+    <link rel="stylesheet" href="style.menu.css">
 </head>
-
 <body>
     <div class="main-container">
         <!--header haut de page-->
         <header>
             <div class="header">
-            <a href="index.html" class="img-ohmyfood"><img src="./images/logo/ohmyfood.png" class="img-ohmyfood" alt="logo du site"></a>
+                <a href="index.html" class="header__icone"><i class="fas fa-arrow-left"></i></a> 
+                <a href="#" class="header__img"><img src="./images/logo/ohmyfood.png" class="img" alt="logo du site"></a>
             </div>
         </header> 
         <section>
-            <div class="">
-                <a href="#"><img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="img-repas" alt="restaurant-repas"></a>
-                </div>
+            <a href="#"><img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="img-repas" alt="restaurant-repas"></a>
         </section>
         <!--Section restaurant-->
         <section class="restaurant"> 
             <div class="container-restaurant">  
                 <div class="restaurant-title"> 
                     <!--titre-->
-                    <h2>Le délice des sens</h2>
+                    <h2 class="restaurant__title-h2 ">Le délice des sens</h2>
+                    <i class="far fa-heart coeur"></i>
                 </div>
                 <div class="conteneur-menu">
                     <div class="menu">
@@ -113,27 +112,20 @@
         <div class="commander">
             <button type="button" class="button button-explorer">Commander</button>
         </div>
-        <footer>
-             <!--Footer bas de page contien renseignement du site--> 
-             <div class="container-footer">
-                <div class="li-footer-first">
-                    <a href="#" class="a-renseignement-footer"><h4 class="renseignement-title">Ohmyfood</h4></a>  
-                <div>
-                <ul class="footer">
-                    <li class="li-footer">
-                        <a href="#" class="a-renseignement"><h4 class="renseignement-title">Proposer un restaurant</h4></a> 
+        <!--Footer bas de page contien renseignement du site--> 
+        <footer class="footer">
+            <nav class="footer__nav">
+                <ul class="footer__nav-ul">
+                    <li><a class="nav__a" href="#">
+                        <i class="fas fa-utensils nav-icone"></i>Proposer un restaurant</a></li>
+                    <li><a class="nav__a" href="#">
+                    <i class="fas fa-hands-helping nav-icone"></i>Devenir partenaire</a>
                     </li>
-                    <li class="li-footer">
-                        <a href="#" class="a-renseignement"><h4 class="renseignement-title">Devenir partenaire</h4></a>
-                    </li>  
-                    <li class="li-footer">
-                        <a href="#" class="a-renseignement"><h4 class="renseignement-title">Mentions légales</h4></a>
-                    </li> 
-                    <li class="li-footer">
-                        <a href="#" class="a-renseignement"><h4 class="renseignement-title">Contact</h4></a> 
-                    </li>   
+                    <li><a class="nav__a" href="#">Mentions légales</a></li>
+                    <li><a class="nav__a" href="mailto:123@ohmyfood.com">Contact</a></li>
                 </ul>
-            </div> 
+              </nav>
+            <h2 class="footer__title">OhmyFood</h2>  
         </footer>
     </div>
 </body>

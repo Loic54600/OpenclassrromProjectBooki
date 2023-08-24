@@ -4,6 +4,8 @@ body {
   justify-content: center;
   width: 100%;
   margin: 0;
+  font-family: "roboto", sans-serif;
+  font-size: 15px;
 }
 body .main__container {
   width: 100%;
@@ -28,6 +30,8 @@ body .main__container {
 .localisation {
   display: flex;
   justify-content: space-around;
+  background-color: #eaeaea;
+  border-top: 1px solid black;
 }
 
 /*recherche*/
@@ -41,12 +45,22 @@ body .main__container {
 
 .button-explorer {
   background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
-  padding: 15px;
+  padding: 15px 30px;
   cursor: pointer;
   border-radius: 50px 50px 50px 50px;
   font-weight: bold;
   color: white;
   border: none;
+}
+
+.icone {
+  padding-right: 10px;
+}
+
+.button-explorer:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  border-bottom: 2px solid;
 }
 
 /*Section fonction*/
@@ -64,6 +78,9 @@ body .main__container {
   flex-wrap: wrap;
   justify-content: space-around;
   padding-bottom: 30px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 20px;
 }
 .fonction .container__fonction-card {
   display: flex;
@@ -71,7 +88,8 @@ body .main__container {
   padding: 0;
   background-color: #f2f2f2;
   border-radius: 20px 20px 20px 20px;
-  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  width: 30%;
 }
 .fonction .number {
   display: flex;
@@ -92,12 +110,26 @@ body .main__container {
   align-items: center;
 }
 .fonction .container__fonction-card:hover {
-  background-color: #99E2D0;
+  background-color: #f3d0e9;
+  transition: 300ms ease-in-out;
 }
 
 /*restaurant*/
 .restaurant__title {
   margin-left: 65px;
+}
+
+.restaurant__card-nouveau {
+  color: #278870;
+  background-color: #99E2D0;
+  text-align: center;
+  width: 100px;
+  padding: 15px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  margin: 0px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .container__restaurant {
@@ -125,6 +157,7 @@ body .main__container {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   text-decoration: none;
   color: black;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .container__restaurant .a-restaurant {
   display: flex;
@@ -136,7 +169,20 @@ body .main__container {
   padding-left: 15px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
+  flex-wrap: wrap;
+  height: 75px;
+}
+.container__restaurant div.card__content .card__content-coeur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50%;
+  margin-top: 25px;
+}
+.container__restaurant .container__restaurant-card:hover {
+  background-color: #99E2D0;
+  box-shadow: 0px 15px 15px #99E2D0;
+  transition: 300ms ease-in-out;
 }
 .container__restaurant .card img {
   object-fit: cover;
@@ -147,8 +193,17 @@ body .main__container {
   height: 250px;
   border-radius: 20px 20px 0px 0px;
 }
+.container__restaurant .card-txt__h3 {
+  margin: 0;
+  padding-top: 15px;
+  width: 75%;
+}
+.container__restaurant .card-txt__p {
+  margin: 0;
+  width: 75%;
+}
 
-/**/
+/*footer*/
 footer {
   display: flex;
   background-color: #353535;
@@ -159,7 +214,9 @@ footer {
 }
 footer h2.footer__title {
   display: flex;
-  margin-right: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-family: "Shrikhand", cursive;
 }
 footer li a {
   display: flex;
@@ -177,6 +234,14 @@ footer li a {
   list-style: none;
   display: flex;
   align-items: center;
+}
+.footer__nav .nav-icone {
+  padding-right: 5px;
+}
+
+.footer__title-a {
+  text-decoration: none;
+  color: white;
 }
 
 .nav__a:hover {
@@ -218,11 +283,65 @@ footer li a {
     display: flex;
     flex-direction: column-reverse;
   }
-  .footer__title {
+  footer h2.footer__title {
     display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+  }
+  .footer__nav-ul {
+    display: flex;
+    flex-direction: column;
+  }
+  footer li a {
+    margin: 0;
+  }
+  .footer__nav .footer__nav-ul {
+    align-items: flex-start;
+    padding: 0;
     margin-left: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1824px) {
+  img.img-ohmyfood {
+    width: 50%;
+  }
+  .container__fonction {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .container__fonction-card {
+    margin-bottom: 15px;
+  }
+  .fonction {
+    margin-left: 20px;
+  }
+  .fonction .fonction__title {
+    margin: 0;
+  }
+  .fonction .container__fonction-card {
+    width: 95%;
+  }
+  .container__restaurant {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 30px;
+  }
+  .container__restaurant .container__restaurant-card {
+    width: 95%;
+  }
+  /*footer*/
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  footer h2.footer__title {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
   }
   .footer__nav-ul {
     display: flex;

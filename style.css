@@ -1,6 +1,5 @@
 /*Structure*/
 body {
-  display: flex;
   justify-content: center;
   width: 100%;
   margin: 0;
@@ -14,7 +13,7 @@ body .main__container {
 /*header*/
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -24,23 +23,6 @@ body .main__container {
   width: 50%;
   padding: 10px;
   margin: auto;
-}
-
-/*localisation*/
-.localisation {
-  display: flex;
-  justify-content: space-around;
-  background-color: #eaeaea;
-  border-top: 1px solid black;
-}
-
-/*recherche*/
-.recherche {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f2f2f2;
-  padding-bottom: 20px;
 }
 
 .button-explorer {
@@ -61,6 +43,68 @@ body .main__container {
   transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px);
   border-bottom: 2px solid;
+}
+
+/*footer*/
+footer {
+  display: flex;
+  background-color: #353535;
+  color: white;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 30px;
+}
+footer h2.footer__title {
+  display: flex;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-family: "Shrikhand", cursive;
+}
+footer li a {
+  display: flex;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.footer__nav {
+  display: flex;
+  margin-right: 30px;
+}
+.footer__nav .footer__nav-ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.footer__nav .nav-icone {
+  padding-right: 5px;
+}
+
+.footer__title-a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__a:hover {
+  color: #99E2D0;
+}
+
+/*localisation*/
+.localisation {
+  display: flex;
+  justify-content: space-around;
+  background-color: #eaeaea;
+  border-top: 1px solid black;
+}
+
+/*recherche*/
+.recherche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding-bottom: 20px;
 }
 
 /*Section fonction*/
@@ -203,106 +247,7 @@ body .main__container {
   width: 75%;
 }
 
-/*footer*/
-footer {
-  display: flex;
-  background-color: #353535;
-  color: white;
-  width: 100%;
-  justify-content: flex-end;
-  padding-top: 30px;
-}
-footer h2.footer__title {
-  display: flex;
-  padding-right: 50px;
-  padding-left: 50px;
-  font-family: "Shrikhand", cursive;
-}
-footer li a {
-  display: flex;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-.footer__nav {
-  display: flex;
-  margin-right: 30px;
-}
-.footer__nav .footer__nav-ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-.footer__nav .nav-icone {
-  padding-right: 5px;
-}
-
-.footer__title-a {
-  text-decoration: none;
-  color: white;
-}
-
-.nav__a:hover {
-  color: #99E2D0;
-}
-
-@media (max-width: 1024px) {
-  img.img-ohmyfood {
-    width: 50%;
-  }
-  .container__fonction {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-  }
-  .container__fonction-card {
-    margin-bottom: 15px;
-  }
-  .fonction {
-    margin-left: 20px;
-  }
-  .fonction .fonction__title {
-    margin: 0;
-  }
-  .fonction .container__fonction-card {
-    width: 95%;
-  }
-  .container__restaurant {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 30px;
-  }
-  .container__restaurant .container__restaurant-card {
-    width: 95%;
-  }
-  /*footer*/
-  .footer {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  footer h2.footer__title {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    padding-left: 15px;
-  }
-  .footer__nav-ul {
-    display: flex;
-    flex-direction: column;
-  }
-  footer li a {
-    margin: 0;
-  }
-  .footer__nav .footer__nav-ul {
-    align-items: flex-start;
-    padding: 0;
-    margin-left: 15px;
-  }
-}
-@media screen and (min-width: 1025px) and (max-width: 1824px) {
+@media screen and (min-width: 500px) and (max-width: 1550px) {
   img.img-ohmyfood {
     width: 50%;
   }

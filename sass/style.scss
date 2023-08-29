@@ -1,5 +1,93 @@
 @import "./variable.scss";
 @import "./global.scss";
+/*
+.loader__enter {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader{
+  font-size: 48px;
+  color: $black;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+.loader:after{
+  content: 'Ohmyfood';
+  font-family: $title_font;
+  position: relative;
+  z-index: 5;
+}
+.loader:before{
+  content: '';
+  height: 6px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background: linear-gradient($primary_color 100%, transparent 0) no-repeat;
+  background-size: 0% auto;
+  animation: 10s lineGrow linear infinite;
+}
+
+@keyframes lineGrow {to {  background-size: 100% auto}}
+
+.loader-circle {
+  width: 150px;
+  height: 150px;
+  border: 3px dotted $primary_color;
+  border-style: solid solid dotted dotted;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+  padding-left: 30px;
+}
+.loader-circle::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px dotted $second_color;
+  border-style: solid solid dotted;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: rotationBack 1s linear infinite;
+  transform-origin: center center;
+}  
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+} 
+*/
+
+
 
 /*localisation*/
 .localisation {
@@ -123,17 +211,9 @@ div.card__content {
   height: 75px;
 
 .card__content-coeur {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-left: 50%;
   margin-top: 25px;
 }
-}
-.container__restaurant-card:hover {
-  background-color: $third_color;
-  box-shadow: 0px 15px 15px $third_color;
-  transition: 300ms ease-in-out;
 }
 .card img {
   object-fit: cover;
@@ -154,7 +234,52 @@ div.card__content {
   width: 75%;
 }
 }
-@media screen and (min-width: 500px) and (max-width: 1550px) {
+label {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	&.icon--heart {
+	&:before, &:after {
+	font-family: fontAwesome;
+	content: '\f004';
+	font-size: 32px;
+	position: absolute;
+	margin-top: -10px;
+	margin-left: -26px;  
+}
+	&:before {
+	color: $light_grey;
+}
+	&:after{
+  opacity: 0;
+  color: $primary_color;
+  }
+}
+}
+.card__content-coeur > input:checked ~ label {
+	&.icon--heart {
+		&:before {
+			color: $primary_color;
+			animation: pulse 0.5s alternate;
+		}
+	}
+}
+@keyframes pulse {
+0%{
+	transform: scale(1) ;
+  opacity: 1;
+}	
+50% {
+	transform: scale(1.2) ;
+  opacity: 1;
+}	
+100%{
+	transform: scale(1);
+  opacity: 1;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 1550px) {
 img.img-ohmyfood {
   width: 50%;
 }

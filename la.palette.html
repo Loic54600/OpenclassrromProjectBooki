@@ -17,9 +17,10 @@
     <div class="main-container">
         <!--header haut de page-->
         <header>
-            <div class="header">
+            
+            <div class="header"> 
                 <a href="index.html" class="header__icone"><i class="fas fa-arrow-left"></i></a> 
-                <a href="index.html"><img src="./images/logo/ohmyfood.png" class="header__img" alt="logo du site"></a>
+                <a href="#"><img src="./images/logo/ohmyfood.png" class="header__img" alt="logo du site"></a>
             </div>
         </header> 
         <section>
@@ -29,9 +30,11 @@
         <section class="restaurant"> 
             <div class="container-restaurant">  
                 <div class="restaurant-title"> 
-                    <!--titre-->
                     <h2 class="restaurant__title-h2 ">La palette de goût</h2>
-                    <i class="far fa-heart coeur"></i>
+                    <div class="checkbox-heart">
+                        <input type="checkbox" id="fav">
+                        <label class="icon--heart" for="fav"></label>
+                    </div>
                 </div>
                 <div class="conteneur-menu">
                     <div class="menu">
@@ -41,6 +44,7 @@
                               <h4 class="menu-nom menu-size">Fricassée d'escargot</h4>
                               <p class="menu-aliment menu-size">Au piment d'Espelette</p>
                               <p class="tarif menu-size">25€</p>
+                              <div><i class="fa-solid fa-circle-check"></i></div>
                             </div>  
                         </div>
                         <div class="card-menu">

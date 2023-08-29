@@ -117,7 +117,7 @@ footer li a {
 .restaurant__title-h2 {
   display: flex;
   justify-content: space-around;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Shrikhand", cursive;
 }
 
@@ -214,7 +214,59 @@ footer li a {
   background-color: #f2f2f2;
 }
 
-@media screen and (min-width: 500px) and (max-width: 1550px) {
+.restaurant-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant-title .checkbox-heart {
+  padding-left: 50px;
+}
+
+label {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+label.icon--heart:before, label.icon--heart:after {
+  font-family: fontAwesome;
+  content: "\f004";
+  font-size: 35px;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -26px;
+}
+label.icon--heart:before {
+  color: black;
+}
+label.icon--heart:after {
+  opacity: 0;
+  color: #9356DC;
+}
+
+.checkbox-heart > input:checked ~ label.icon--heart:before {
+  color: #9356DC;
+  animation: pulse 0.5s alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1550px) {
+  .container-restaurant {
+    width: 100%;
+  }
   .conteneur-menu {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));

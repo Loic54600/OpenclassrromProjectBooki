@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>OhmyFood</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
@@ -12,8 +14,14 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/e9ad2cc302.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="loader__enter">
+        <span class="loader-circle"></span>
+        <div class="loader"></div>
+    </div>
     <div class="main__container">
         <!--header haut de page-->
         <header>
@@ -85,7 +93,8 @@
                                 <p class="card-txt__p">Ménilmontant</p> 
                             </div>
                             <div class="card__content-coeur">
-                                <i class="far fa-heart "></i>
+                                <input type="checkbox" id="fav">
+	                            <label class="icon--heart" for="fav"></label>
                             </div>
                         </div> 
                     </a>
@@ -99,6 +108,10 @@
                                 <h3 class="card-txt__h3">La note enchantée</h3>
                                 <p class="card-txt__p">Charonne</p>
                             </div>
+                            <div class="card__content-coeur">
+                                <input type="checkbox" id="fav1">
+	                            <label class="icon--heart" for="fav1"></label>
+                            </div>
                         </div>
                     </a>
                 </article>
@@ -110,7 +123,11 @@
                                 <h3 class="card-txt__h3">À la francaise</h3>
                                 <p class="card-txt__p">Cité Rouge</p>
                             </div>
-                        </div>
+                            <div class="card__content-coeur">
+                                <input type="checkbox" id="fav2">
+	                            <label class="icon--heart" for="fav2"></label>
+                            </div>
+                        </div>   
                     </a>
                 </article>
                 <article class="card container__restaurant-card">
@@ -121,6 +138,10 @@
                                 <h3 class="card-txt__h3">Le délice des sens</h3>
                                 <p class="card-txt__p">Folie-Méricourt</p>
                             </div>
+                            <div class="card__content-coeur">
+                                <input type="checkbox" id="fav3">
+	                            <label class="icon--heart" for="fav3"></label>
+                            </div>    
                         </div>
                     </a>
                 </article>   

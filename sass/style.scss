@@ -234,6 +234,7 @@ div.card__content {
   width: 75%;
 }
 }
+/*animation du coeur*/
 label {
 	top: 50%;
 	left: 50%;
@@ -241,8 +242,12 @@ label {
 	&.icon--heart {
 	&:before, &:after {
 	font-family: fontAwesome;
-	content: '\f004';
-	font-size: 32px;
+  /*forme de coeur*/
+  content: '\f004';
+  /*
+  font: var(--fa-font-solid);
+  */
+	font-size: 35px;
 	position: absolute;
 	margin-top: -10px;
 	margin-left: -26px;  

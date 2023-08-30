@@ -325,6 +325,7 @@ footer li a {
   width: 75%;
 }
 
+/*animation du coeur*/
 label {
   top: 50%;
   left: 50%;
@@ -332,8 +333,12 @@ label {
 }
 label.icon--heart:before, label.icon--heart:after {
   font-family: fontAwesome;
+  /*forme de coeur*/
   content: "\f004";
-  font-size: 32px;
+  /*
+  font: var(--fa-font-solid);
+  */
+  font-size: 35px;
   position: absolute;
   margin-top: -10px;
   margin-left: -26px;

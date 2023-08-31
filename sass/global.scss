@@ -2,7 +2,6 @@
 
 /*Structure*/
 body {
-  justify-content: center;
   width: 100%;
   margin: 0;
   font-family: $font_roboto;
@@ -18,14 +17,13 @@ body {
   justify-content: center;
   margin-top: 15px;
   margin-bottom: 15px;
-  
+}  
 .header__img {
   display: flex;
   justify-content: space-around;
   width: 50%;
   padding: 10px;
   margin: auto;
-}
 }
 .button-explorer {
   background: $linear_background;
@@ -34,17 +32,15 @@ body {
   border-radius: 50px 50px 50px 50px;
   font-weight: bold;
   color: $white;
-  border: none;
+  border: none; 
+  transition: transform 100ms;
 }  
 .icone {
   padding-right: 10px;
 }
 .button-explorer:active {
-  transform: translate(0px,5px);
-  -webkit-transform: translate(0px,5px);
-  border-bottom: 2px solid;
+  transform: scale(1.25);
 }
-
 /*footer*/
 footer {
   display: flex;

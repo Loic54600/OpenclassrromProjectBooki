@@ -1,6 +1,6 @@
 @import "./variable.scss";
 @import "./global.scss";
-/*
+
 .loader__enter {
   position: fixed;
   height: 100%;
@@ -10,24 +10,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+  /*temps d'apparition du loader*/
+  animation: fadeout 7s forwards;
+}
+@keyframes fadeout {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
 }
 .loader{
   font-size: 48px;
   color: $black;
   display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   position: relative;
 }
-.loader:after{
+.loader:before{
   content: 'Ohmyfood';
   font-family: $title_font;
-  position: relative;
-  z-index: 5;
-}
-.loader:before{
-  content: '';
-  height: 6px;
+  height: 5px;
   border: 1px solid;
   border-radius: 10px;
   width: 100%;
@@ -35,20 +40,26 @@
   bottom: 0px;
   background: linear-gradient($primary_color 100%, transparent 0) no-repeat;
   background-size: 0% auto;
-  animation: 10s lineGrow linear infinite;
+  /*temps de chargement de barre*/
+  animation: 5s lineGrow linear infinite;
 }
-
+.loader:after{
+  content: 'Bienvenue sur';
+  font-family: $title_font;
+  position: relative;
+  z-index: 5;
+}
 @keyframes lineGrow {to {  background-size: 100% auto}}
-
 .loader-circle {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border: 3px dotted $primary_color;
   border-style: solid solid dotted dotted;
   border-radius: 50%;
   display: inline-block;
   position: relative;
   box-sizing: border-box;
+  /*vitesse de rotation du cercle*/
   animation: rotation 2s linear infinite;
   padding-left: 30px;
 }
@@ -61,12 +72,12 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  border: 3px dotted $second_color;
+  border: 5px dotted $second_color;
   border-style: solid solid dotted;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  animation: rotationBack 1s linear infinite;
+  animation: rotation 15s linear infinite;
   transform-origin: center center;
 }  
 @keyframes rotation {
@@ -85,9 +96,6 @@
     transform: rotate(-360deg);
   }
 } 
-*/
-
-
 
 /*localisation*/
 .localisation {
@@ -178,6 +186,7 @@
   padding-bottom: 30px;
   margin-left: 50px;
   margin-right: 50px;
+
 .restaurant {
   background-color: $light_white;
   padding-top: 20px;
@@ -195,7 +204,7 @@
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
   text-decoration: none;
   color: $black;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .a-restaurant {
   display: flex;

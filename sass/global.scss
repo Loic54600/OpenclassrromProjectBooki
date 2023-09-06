@@ -6,24 +6,31 @@ body {
   margin: 0;
   font-family: $font_roboto;
   font-size: 15px; 
+  align-items: center;
 
 .main__container {
   width: 100%;
 }
 }
 /*header*/
-.header {
+.header{
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  position: relative;
+  font-family: $title_font;
+  font-size: 25px;
   margin-top: 15px;
   margin-bottom: 15px;
-}  
-.header__img {
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
-  padding: 10px;
-  margin: auto;
+}
+.header a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  position: absolute;
+  left: 25px;
 }
 .button-explorer {
   background: $linear_background;
@@ -33,13 +40,13 @@ body {
   font-weight: bold;
   color: $white;
   border: none; 
-  transition: transform 100ms;
-}  
+  margin-top: 15px;
+  margin-bottom: 15px;  
+  opacity: 1;
+  transition: 0.5s;
+} 
 .icone {
   padding-right: 10px;
-}
-.button-explorer:active {
-  transform: scale(1.25);
 }
 /*footer*/
 footer {

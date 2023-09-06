@@ -1,101 +1,6 @@
 @import "./variable.scss";
 @import "./global.scss";
-
-.loader__enter {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  /*temps d'apparition du loader*/
-  animation: fadeout 7s forwards;
-}
-@keyframes fadeout {
-  0% {
-    opacity:1;
-  }
-  100% {
-    opacity:0;
-  }
-}
-.loader{
-  font-size: 48px;
-  color: $black;
-  display: inline-block;
-  font-weight: 400;
-  position: relative;
-}
-.loader:before{
-  content: 'Ohmyfood';
-  font-family: $title_font;
-  height: 5px;
-  border: 1px solid;
-  border-radius: 10px;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  background: linear-gradient($primary_color 100%, transparent 0) no-repeat;
-  background-size: 0% auto;
-  /*temps de chargement de barre*/
-  animation: 5s lineGrow linear infinite;
-}
-.loader:after{
-  content: 'Bienvenue sur';
-  font-family: $title_font;
-  position: relative;
-  z-index: 5;
-}
-@keyframes lineGrow {to {  background-size: 100% auto}}
-.loader-circle {
-  width: 200px;
-  height: 200px;
-  border: 3px dotted $primary_color;
-  border-style: solid solid dotted dotted;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-  /*vitesse de rotation du cercle*/
-  animation: rotation 2s linear infinite;
-  padding-left: 30px;
-}
-.loader-circle::after {
-  content: '';  
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  border: 5px dotted $second_color;
-  border-style: solid solid dotted;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  animation: rotation 15s linear infinite;
-  transform-origin: center center;
-}  
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} 
-@keyframes rotationBack {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-} 
+@import "./animation.scss";
 
 /*localisation*/
 .localisation {
@@ -111,12 +16,12 @@
   align-items: center;
   background-color: $light_white;
   padding-bottom: 20px;
+
 }
 /*Section fonction*/
 .fonction {
   display: flex;
   flex-direction: column;
-  padding-left: 25px;
   padding-top: 50px;
 
 .fonction__title {
@@ -130,6 +35,9 @@
   margin-left: 150px;
   margin-right: 150px;
   margin-top: 20px;
+}
+h3.card-title-fonction {
+  font-size: 15px;
 }
 .container__fonction-card {
   display: flex;
@@ -164,9 +72,6 @@
   }
 }
 /*restaurant*/ 
-.restaurant__title {
-  margin-left: 65px;
-}
 .restaurant__card-nouveau {
   color: $four_color;
   background-color: $third_color;
@@ -222,6 +127,7 @@ div.card__content {
 .card__content-coeur {
   margin-left: 50%;
   margin-top: 25px;
+
 }
 }
 .card img {
@@ -237,63 +143,17 @@ div.card__content {
   margin: 0;
   padding-top: 15px;
   width: 75%; 
+  font-size: 15px;
 }
 .card-txt__p {
   margin: 0;
   width: 75%;
+  font-size: 15px;
 }
-}
-/*animation du coeur*/
-label {
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	&.icon--heart {
-	&:before, &:after {
-	font-family: fontAwesome;
-  /*forme de coeur*/
-  content: '\f004';
-  /*
-  font: var(--fa-font-solid);
-  */
-	font-size: 35px;
-	position: absolute;
-	margin-top: -10px;
-	margin-left: -26px;  
-}
-	&:before {
-	color: $light_grey;
-}
-	&:after{
-  opacity: 0;
-  color: $primary_color;
-  }
-}
-}
-.card__content-coeur > input:checked ~ label {
-	&.icon--heart {
-		&:before {
-			color: $primary_color;
-			animation: pulse 0.5s alternate;
-		}
-	}
-}
-@keyframes pulse {
-0%{
-	transform: scale(1) ;
-  opacity: 1;
-}	
-50% {
-	transform: scale(1.2) ;
-  opacity: 1;
-}	
-100%{
-	transform: scale(1);
-  opacity: 1;
-	}
 }
 
-@media screen and (min-width: 640px) and (max-width: 1550px) {
+/*Mobile*/
+@media only screen and (min-width: 640px) {
 img.img-ohmyfood {
   width: 50%;
 }
@@ -312,7 +172,13 @@ img.img-ohmyfood {
   margin:0;
 }
 .fonction .container__fonction-card {
-  width: 95%;
+  width: 100%;
+}
+
+.restaurant__title, h2 {
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .container__restaurant {
   display: flex;

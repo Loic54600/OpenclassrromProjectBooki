@@ -1,0 +1,201 @@
+@import "./variable.scss";
+
+/*loader accueil*/
+.loader__enter {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.95);
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	/*temps d'apparition du loader*/
+	animation: fadeout 5s forwards;
+  }
+  /*Niveau opacite*/
+  @keyframes fadeout {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	  z-index: 0;
+	}
+  }
+  .loader{
+	font-size: 48px;
+	color: $black;
+	display: inline-block;
+	font-weight: 400;
+	position: relative;
+  }
+  .loader:before{
+	content: 'Ohmyfood';
+	font-family: $title_font;
+	height: 5px;
+	border: 1px solid;
+	border-radius: 10px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	background: linear-gradient($primary_color 100%, transparent 0) no-repeat;
+	background-size: 0% auto;
+	/*temps de chargement de barre*/
+	animation: 5s lineGrow linear infinite;
+  }
+  .loader:after{
+	content: 'Bienvenue sur';
+	font-family: $title_font;
+	position: relative;
+	z-index: 5;
+  }
+  @keyframes lineGrow {to {  background-size: 100% auto}}
+  .loader-circle {
+	width: 200px;
+	height: 200px;
+	border: 3px dotted $primary_color;
+	border-style: solid solid dotted dotted;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	/*vitesse de rotation du cercle*/
+	animation: rotation 2s linear infinite;
+	padding-left: 30px;
+	animation: fadeout 2s forwards;
+  }
+  .loader-circle::after {
+	content: '';  
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border: 5px dotted $second_color;
+	border-style: solid solid dotted;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	animation: rotation 15s linear infinite;
+	transform-origin: center center;
+  }  
+  @keyframes rotation {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  } 
+  @keyframes rotationBack {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(-360deg);
+	}
+  } 
+  
+/*animation du coeur*/
+label {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	&.icon--heart {
+	&:before, &:after {
+	font-family: fontAwesome;
+  /*forme de coeur*/
+  content: '\f004';
+  text-shadow: 1px 1px 5px $black;
+	font-size: 35px;
+	position: absolute;
+	margin-top: -10px;
+	margin-left: -26px;  
+}
+	&:before {
+	color: $white;
+}
+	&:after{
+  opacity: 0;
+  color: $primary_color;
+  }
+}
+}
+.card__content-coeur > input:checked ~ label {
+	&.icon--heart {
+		&:before {
+			color: $primary_color;
+			animation: pulse 0.5s alternate;
+		}
+	}
+}
+@keyframes pulse {
+0%{
+	transform: scale(1) ;
+  opacity: 1;
+}	
+50% {
+	transform: scale(1.2) ;
+  opacity: 1;
+}	
+100%{
+	transform: scale(1);
+  opacity: 1;
+	}
+}
+/*animation bouton*/
+/*effet de survol, eclaircir le bouton*/
+.button-explorer:hover {
+	opacity: 0.8;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);	
+}
+/*animation titres des menus*/
+.repas {
+	display: flex;
+	flex-direction: column;
+	font-size: 15px;
+}
+.repas::after {
+content: "";
+	width: 50px;
+	height: 5px;
+	background-color: #99e2d0;
+	position: static;
+	bottom: 26rem;
+	margin-top: 5px;
+}
+/*menu + animation*/
+  .card-menu:hover .card-menu_check {
+	margin-right: -10px;
+}
+
+/*animation entrée des menus*/
+
+.card-anime {
+	animation-name: anime;
+	animation-duration: 500ms;
+	font-family: $font_roboto;
+
+} 
+/*delai d'apparition des titres menus*/
+.enter-anime {
+	animation-delay: 0.5s;
+}
+/*delai d'apparition des plats*/
+.plat-anime {
+	animation-delay: 0.8s;
+}
+@keyframes anime {
+	from {
+	  transform: translateY(-100px);
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }

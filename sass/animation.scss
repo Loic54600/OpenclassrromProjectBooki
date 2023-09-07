@@ -66,6 +66,7 @@
 	padding-left: 30px;
 	animation: fadeout 2s forwards;
   }
+  /*2eme cercle*/
   .loader-circle::after {
 	content: '';  
 	box-sizing: border-box;
@@ -99,7 +100,6 @@
 	  transform: rotate(-360deg);
 	}
   } 
-  
 /*animation du coeur*/
 label {
 	top: 50%;
@@ -174,20 +174,19 @@ content: "";
 }
 
 /*animation entrée des menus*/
-
 .card-anime {
 	animation-name: anime;
-	animation-duration: 500ms;
+	animation-duration: 3000ms;
 	font-family: $font_roboto;
 
 } 
 /*delai d'apparition des titres menus*/
 .enter-anime {
-	animation-delay: 0.5s;
+	animation-delay: 1s;
 }
 /*delai d'apparition des plats*/
 .plat-anime {
-	animation-delay: 0.8s;
+	animation-delay: 2s;
 }
 @keyframes anime {
 	from {

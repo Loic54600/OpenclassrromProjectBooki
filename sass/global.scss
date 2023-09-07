@@ -54,7 +54,6 @@ footer {
   background-color: #353535;
   color: white;
   width: 100%;
-  justify-content: flex-end;
   padding-top: 30px;
 
 h2.footer__title {
@@ -77,11 +76,10 @@ li a {
 
 .footer__nav-ul {
   list-style: none;
-  display: flex;
-  align-items: center;
+
 }
 .nav-icone {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 }
 .footer__title-a {

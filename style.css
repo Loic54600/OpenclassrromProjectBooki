@@ -57,7 +57,6 @@ footer {
   background-color: #353535;
   color: white;
   width: 100%;
-  justify-content: flex-end;
   padding-top: 30px;
 }
 footer h2.footer__title {
@@ -80,11 +79,9 @@ footer li a {
 }
 .footer__nav .footer__nav-ul {
   list-style: none;
-  display: flex;
-  align-items: center;
 }
 .footer__nav .nav-icone {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .footer__title-a {
@@ -543,6 +540,9 @@ label.icon--heart:after {
   label.icon--heart {
     display: flex;
     padding-top: 10px;
+  }
+  .footer__nav {
+    grid-template-columns: 200px 1fr 50%;
   }
 }
 

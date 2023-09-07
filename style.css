@@ -515,5 +515,35 @@ label.icon--heart:after {
     margin-left: 15px;
   }
 }
+/**/
+@media only screen and (min-width: 1550px) {
+  .container__restaurant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 1em;
+  }
+  .container__restaurant-card {
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+  }
+  .a-restaurant {
+    width: 100%;
+  }
+  p.restaurant__card-nouveau {
+    font-size: 15px;
+  }
+  .card__content-coeur {
+    margin-left: 50%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+  label.icon--heart {
+    display: flex;
+    padding-top: 10px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

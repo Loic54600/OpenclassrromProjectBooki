@@ -46,7 +46,7 @@
 	background: linear-gradient($primary_color 100%, transparent 0) no-repeat;
 	background-size: 0% auto;
 	/*temps de chargement de barre*/
-	animation: 5s lineGrow linear infinite;
+	animation: 7s lineGrow linear infinite;
   }
   .loader:after{
 	content: 'Bienvenue sur';
@@ -67,7 +67,7 @@
 	/*vitesse de rotation du cercle*/
 	animation: rotation 2s linear infinite;
 	padding-left: 30px;
-	animation: fadeout 2s forwards;
+	animation: fadeout 6s forwards;
   }
   /*2eme cercle*/
   .loader-circle::after {
@@ -175,13 +175,11 @@ content: "";
 .card-menu:hover .card-menu_check {
 	margin-right: 0px;
 }
-
 /*animation entrée des menus*/
 .card-anime {
 	animation-name: anime;
 	animation-duration: 3000ms;
 	font-family: $font_roboto;
-
 } 
 @keyframes anime {
 	from {

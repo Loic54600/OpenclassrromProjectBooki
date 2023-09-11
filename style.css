@@ -113,9 +113,12 @@ footer li a {
   0% {
     opacity: 1;
   }
-  100% {
+  99% {
     opacity: 0;
     z-index: 0;
+  }
+  100% {
+    display: none;
   }
 }
 .loader {
@@ -272,7 +275,7 @@ label.icon--heart:after {
 
 /*menu + animation*/
 .card-menu:hover .card-menu_check {
-  margin-right: -10px;
+  margin-right: 0px;
 }
 
 /*animation entrée des menus*/
@@ -280,16 +283,6 @@ label.icon--heart:after {
   animation-name: anime;
   animation-duration: 3000ms;
   font-family: "roboto", sans-serif;
-}
-
-/*delai d'apparition des titres menus*/
-.enter-anime {
-  animation-delay: 1s;
-}
-
-/*delai d'apparition des plats*/
-.plat-anime {
-  animation-delay: 2s;
 }
 
 @keyframes anime {

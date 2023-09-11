@@ -19,9 +19,12 @@
 	0% {
 	  opacity:1;
 	}
+	99% {
+		opacity:0;
+		z-index: 0;
+	  }
 	100% {
-	  opacity:0;
-	  z-index: 0;
+		display: none;
 	}
   }
   .loader{
@@ -169,8 +172,8 @@ content: "";
 	margin-top: 5px;
 }
 /*menu + animation*/
-  .card-menu:hover .card-menu_check {
-	margin-right: -10px;
+.card-menu:hover .card-menu_check {
+	margin-right: 0px;
 }
 
 /*animation entrée des menus*/
@@ -180,14 +183,6 @@ content: "";
 	font-family: $font_roboto;
 
 } 
-/*delai d'apparition des titres menus*/
-.enter-anime {
-	animation-delay: 1s;
-}
-/*delai d'apparition des plats*/
-.plat-anime {
-	animation-delay: 2s;
-}
 @keyframes anime {
 	from {
 	  transform: translateY(-100px);

@@ -114,7 +114,16 @@ h3.repas {
   }
 }
 /*Mobile*/
-@media only screen and (min-width: 640px) {
+/*Mobile*/
+/*responsive*/
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  img.img-ohmyfood {
+    width: 50%;
+  }
+  .container-restaurant {
+    width: 100%;
+  }
+  
   /*footer*/
   .footer {
     display: flex;
@@ -138,6 +147,6 @@ h3.repas {
     padding: 0;
     margin-left: 15px;
   }
-  }
+}
   
   

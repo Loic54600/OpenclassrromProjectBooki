@@ -11,6 +11,11 @@ body .main__container {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 /*header*/
 .header {
   display: flex;
@@ -73,15 +78,40 @@ footer li a {
   margin-left: 20px;
 }
 
+/*footer*/
+footer {
+  display: flex;
+  background-color: #353535;
+  color: white;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 30px;
+}
+footer h2.footer__title {
+  display: flex;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-family: "Shrikhand", cursive;
+}
+footer li a {
+  display: flex;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
 .footer__nav {
   display: flex;
   margin-right: 30px;
 }
 .footer__nav .footer__nav-ul {
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 .footer__nav .nav-icone {
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .footer__title-a {
@@ -141,7 +171,7 @@ footer li a {
   background: linear-gradient(#9356DC 100%, transparent 0) no-repeat;
   background-size: 0% auto;
   /*temps de chargement de barre*/
-  animation: 5s lineGrow linear infinite;
+  animation: 7s lineGrow linear infinite;
 }
 
 .loader:after {
@@ -168,7 +198,7 @@ footer li a {
   /*vitesse de rotation du cercle*/
   animation: rotation 2s linear infinite;
   padding-left: 30px;
-  animation: fadeout 2s forwards;
+  animation: fadeout 6s forwards;
 }
 
 /*2eme cercle*/
@@ -420,7 +450,15 @@ h3.repas {
 }
 
 /*Mobile*/
-@media only screen and (min-width: 640px) {
+/*Mobile*/
+/*responsive*/
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  img.img-ohmyfood {
+    width: 50%;
+  }
+  .container-restaurant {
+    width: 100%;
+  }
   /*footer*/
   .footer {
     display: flex;

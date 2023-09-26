@@ -85,6 +85,9 @@ h3.card-title-fonction {
   margin: 0px;
   border-radius:10px 10px 10px 10px;
 }
+.h2__title{
+  margin-left: 40px;
+}
 .container__restaurant {
   display: flex;
   flex-wrap: wrap;
@@ -92,7 +95,6 @@ h3.card-title-fonction {
   padding-bottom: 30px;
   margin-left: 50px;
   margin-right: 50px;
-
 .restaurant {
   background-color: $light_white;
   padding-top: 20px;
@@ -153,98 +155,67 @@ div.card__content {
 }
 
 /*Mobile*/
-@media only screen and (min-width: 640px) {
-img.img-ohmyfood {
-  width: 50%;
-}
-.container__fonction {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-}
-.container__fonction-card {
-  margin-bottom: 15px;
-}
-.fonction {
-  margin-left: 20px;
-}
-.fonction .fonction__title {
-  margin:0;
-}
-.fonction .container__fonction-card {
-  width: 100%;
-}
-
-.restaurant__title, h2 {
-  margin-left: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.container__restaurant {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 30px; 
-}
-.container__restaurant .container__restaurant-card {
-  width: 95%;
-}
-/*footer*/
-.footer {
-  display: flex;
-  flex-direction: column-reverse
-}
-footer h2.footer__title {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  padding-left: 15px;
-}
-.footer__nav-ul {
-  display: flex;
-  flex-direction: column;
-}
-footer li a {
-  margin: 0;
-}
-.footer__nav .footer__nav-ul {
-  align-items: flex-start;
-  padding: 0;
-  margin-left: 15px;
-}
-}
-/**/
-@media only screen and (min-width: 1550px) {
-  .container__restaurant {
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 10px;
-    row-gap: 1em;
+/*responsive*/
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  img.img-ohmyfood {
+    width: 50%;
   }
-  .container__restaurant-card{
-    
-    align-items:center;
-    justify-content:center;
-    font-size:40px;
-  }
-  .a-restaurant {
-    width: 100%;
-  }
-  p.restaurant__card-nouveau {
-    font-size: 15px;
-  }
-  .card__content-coeur {
-    margin-left: 50%;
-    margin-top: 25px;
+  .container__fonction {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .fonction .container__fonction {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    margin-left: 50px;
 }
-  label.icon--heart {
-  display: flex;
-  padding-top: 10px;
-}
-.footer__nav {
-  grid-template-columns: 200px 1fr 50%;
-}
+  .container__fonction-card {
+    margin-bottom: 15px;
+  }
+  .fonction .container__fonction-card {
+    width: 90%;
+  }
+  .container__restaurant {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 15px; 
+    padding-right: 15px;
+    padding-top: 15px;
+  }
+  .container__restaurant .container__restaurant-card {
+    width: 95%;
+  }
+.h2__title{
+    margin-left: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+  }
+  /*footer*/
+  .footer {
+    display: flex;
+    flex-direction: column-reverse
+  }
+  footer h2.footer__title {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+  }
+  .footer__nav-ul {
+    display: flex;
+    flex-direction: column;
+  }
+  footer li a {
+    margin: 0;
+  }
+  .footer__nav .footer__nav-ul {
+    align-items: flex-start;
+    padding: 0;
+    margin-left: 15px;
+  }
 }

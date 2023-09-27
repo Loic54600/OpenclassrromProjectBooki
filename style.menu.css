@@ -237,6 +237,12 @@ footer li a {
   }
 }
 /*animation du coeur*/
+.card__content-coeur {
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+}
+
 label {
   top: 50%;
   left: 50%;
@@ -346,7 +352,7 @@ label.icon--heart:after {
   height: 500px;
 }
 
-.restaurant__title-h2 {
+.restaurant__title-h1 {
   display: flex;
   justify-content: space-around;
   font-size: 25px;
@@ -384,6 +390,7 @@ label.icon--heart:after {
 
 .card-menu__header {
   white-space: nowrap;
+  /**/
   text-overflow: ellipsis;
   overflow: hidden;
   flex: 1;
@@ -393,6 +400,7 @@ label.icon--heart:after {
 .card-menu__title {
   margin: 0;
   white-space: nowrap;
+  /**/
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -400,7 +408,9 @@ label.icon--heart:after {
 .card-menu__description {
   margin: 0;
   white-space: nowrap;
+  /*permet d'afficher les points de suspension*/
   text-overflow: ellipsis;
+  /*permet de masquer tous ce qui ne rentre pas dans le conteneur*/
   overflow: hidden;
 }
 

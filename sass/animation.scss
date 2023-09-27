@@ -174,7 +174,9 @@ content: "";
 /*menu + animation*/
 .card-menu:hover .card-menu_check {
 	margin-right: 0px;
+
 }
+
 /*animation entrée des menus*/
 .card-anime {
 	animation-name: anime;
@@ -190,4 +192,4 @@ content: "";
 	  opacity: 1;
 	  transform: translateY(0);
 	}
-  }
+}

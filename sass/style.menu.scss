@@ -56,6 +56,7 @@
 }
 .card-menu__header {
   white-space: nowrap;
+  /**/
   text-overflow: ellipsis;
   overflow: hidden;
   flex: 1;
@@ -64,13 +65,16 @@
 .card-menu__title {
   margin: 0;
   white-space: nowrap;
+  /**/
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .card-menu__description {
   margin: 0;
   white-space: nowrap;
+  /*permet d'afficher les oints de suspension*/
   text-overflow: ellipsis;
+  /*permet de masquer tous ce qui ne rentre pas dans le conteneur*/
   overflow: hidden;
 }
 .menu {

@@ -346,6 +346,10 @@ label.icon--heart:after {
   padding-left: 50px;
 }
 
+.checkbox-heart {
+  padding-left: 50px;
+}
+
 .img-repas {
   object-fit: cover;
   width: 100%;

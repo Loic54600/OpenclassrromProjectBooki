@@ -238,7 +238,6 @@ footer li a {
 }
 /*animation du coeur*/
 .card__content-coeur {
-  position: absolute;
   right: 30px;
   bottom: 25px;
 }
@@ -343,10 +342,6 @@ label.icon--heart:after {
   padding-left: 50px;
 }
 .restaurant-title .card__content-coeur {
-  padding-left: 50px;
-}
-
-.checkbox-heart {
   padding-left: 50px;
 }
 

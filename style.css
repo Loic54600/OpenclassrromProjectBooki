@@ -7,9 +7,6 @@ body {
   font-size: 15px;
   align-items: center;
 }
-body .main__container {
-  width: 100%;
-}
 
 a {
   text-decoration: none;
@@ -348,15 +345,14 @@ label.icon--heart:after {
   padding-bottom: 20px;
 }
 
+
 /*Section fonction*/
 .fonction {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
 }
-.fonction .fonction__title {
-  margin-left: 40px;
-}
+
 .fonction .container__fonction {
   display: flex;
   flex-wrap: wrap;
@@ -371,13 +367,13 @@ label.icon--heart:after {
 }
 .fonction .container__fonction-card {
   display: flex;
-  width: calc(30% - 50px);
   padding: 0;
   background-color: #f2f2f2;
   border-radius: 20px 20px 20px 20px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   width: 30%;
+  height: 75px;
 }
 .fonction .number {
   display: flex;
@@ -388,8 +384,8 @@ label.icon--heart:after {
   height: 40px;
   align-items: center;
   justify-content: center;
-  margin-left: -25px;
-  margin-right: 35px;
+  margin-left: -20px;
+  margin-right: 25px;
 }
 .fonction .a-fonction {
   display: flex;
@@ -417,7 +413,11 @@ label.icon--heart:after {
 }
 
 .h2__title {
-  margin-left: 40px;
+  margin-left: 75px;
+}
+.h2__title {
+  margin-left: 75px;
+
 }
 
 .container__restaurant {
@@ -487,33 +487,28 @@ label.icon--heart:after {
 
 /*Mobile*/
 /*responsive*/
-@media screen and (min-width: 640px) and (max-width: 1024px) {
+@media  (max-width: 1024px) {
   img.img-ohmyfood {
     width: 50%;
   }
-  .container__fonction {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
+
+  .recherche_container {
+    margin-left: 15px;
   }
   .fonction .container__fonction {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
     margin: 0;
-    margin-left: 50px;
+    padding-top: 15px;
   }
   .container__fonction-card {
     margin-bottom: 15px;
   }
   .fonction .container__fonction-card {
-    width: 90%;
+    width: 80%;
   }
   .container__restaurant {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
   }
@@ -521,7 +516,7 @@ label.icon--heart:after {
     width: 95%;
   }
   .h2__title {
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -548,6 +543,30 @@ label.icon--heart:after {
     padding: 0;
     margin-left: 15px;
   }
+
+  .loader:before {
+    content: "Ohmyfood";
+    font-size: 30px;
+  }
+  
+  .loader:after {
+    content: "Bienvenue sur";
+    font-size: 30px;
+  }
+.loader__enter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .loader-circle {
+    width: 75px;
+    height: 75px;
+  }
+  .loader-circle::after {
+    width: 50px;
+    height: 50px;
+  }
+
 }
 
 /*# sourceMappingURL=style.css.map */

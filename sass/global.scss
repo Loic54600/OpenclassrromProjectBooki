@@ -5,19 +5,21 @@ body {
   width: 100%;
   margin: 0;
   font-family: $font_roboto;
-  font-size: 15px; 
+  font-size: 15px;
   align-items: center;
 
-.main__container {
-  width: 100%;
+  .main__container {
+    width: 100%;
+  }
 }
-}
+
 a {
   text-decoration: none;
   color: $white;
 }
+
 /*header*/
-.header{
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,6 +31,7 @@ a {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
 .header a {
   text-decoration: none;
   color: black;
@@ -36,6 +39,7 @@ a {
   position: absolute;
   left: 25px;
 }
+
 .button-explorer {
   background: $linear_background;
   padding: 15px 30px;
@@ -43,16 +47,18 @@ a {
   border-radius: 50px 50px 50px 50px;
   font-weight: bold;
   color: $white;
-  border: none; 
+  border: none;
   margin-top: 15px;
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
   opacity: 1;
   transition: 0.5s;
 
-} 
+}
+
 .icone {
   padding-right: 10px;
 }
+
 /*footer*/
 footer {
   display: flex;
@@ -61,20 +67,22 @@ footer {
   width: 100%;
   padding-top: 30px;
 
-h2.footer__title {
-  display: flex;
-  padding-right: 50px;
-  padding-left: 50px;
-  font-family: $title_font;
+  h2.footer__title {
+    display: flex;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: $title_font;
+  }
+
+  li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+  }
 }
-li a {
-  display: flex;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  margin-left: 20px;
-}
-}
+
 /*footer*/
 footer {
   display: flex;
@@ -84,40 +92,42 @@ footer {
   justify-content: flex-end;
   padding-top: 30px;
 
-h2.footer__title {
-  display: flex;
-  padding-right: 50px;
-  padding-left: 50px;
-  font-family: $title_font;
+  h2.footer__title {
+    display: flex;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-family: $title_font;
+  }
+
+  li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+  }
 }
-li a {
-  display: flex;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  margin-left: 20px;
-}
-}
+
 .footer__nav {
   display: flex;
   margin-right: 30px;
 
-.footer__nav-ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
+  .footer__nav-ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-icone {
+    padding-right: 5px;
+  }
 }
-.nav-icone {
-  padding-right: 5px;
-}
-}
+
 .footer__title-a {
   text-decoration: none;
   color: $white;
 }
+
 .nav__a:hover {
   color: $third_color;
 }
-
-
-

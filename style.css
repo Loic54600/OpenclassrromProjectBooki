@@ -545,12 +545,10 @@ label.icon--heart:after {
   }
 
   .loader:before {
-    content: "Ohmyfood";
     font-size: 30px;
   }
   
   .loader:after {
-    content: "Bienvenue sur";
     font-size: 30px;
   }
 .loader__enter {
